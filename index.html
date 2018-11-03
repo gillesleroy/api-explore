@@ -4,45 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>API Exploration</title>
-    <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/proto.css" />
-     <!-- jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script type="text/javascript" src="assets/javascript/lib.js"></script>    
+    <title>Document</title>
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Override CSS file -->
+    <link rel="stylesheet" href = "assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Buttons will Get Dumped Here -->
-        <div id="buttons-view">
-        </div>
-        <form id="form-api">
-            <label for="input-name">Api name</label>
-            <input id="input-name" type="text" >
-            <br>
-            <label for="input-url">URL</label>
-            <input id="input-url" type="text" >    
-            <br>
-            <label for="input-param">Parameters</label>
-            <input id="input-param" type="text" >      
-            <br>
-            <label for="input-sample">Sample</label>
-            <input id="input-sample" type="text" >   
-            <br>          
-            <label for="input-key">Key</label>
-            <input id="input-key" type="text" >  
-            <br>            
-            <input id="add-button" type="submit" value="Add">
-            <!-- <input id="clear-button" type="submit" value="Clear"> -->
-        </form>
+<!-- Nav Bar -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
     </div>
-    <div class="container" id="divSample" >
-        <iframe id="frameSample"></iframe>
-    </div>
-    <!-- <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA206lTheBUyZfomtzhYdMi2RPpq3HJiqA&callback=initMap" type="text/javascript"></script> -->
-    <script type="text/javascript" src="assets/javascript/proto.js"></script>
+</nav>
 </body>
 </html>
