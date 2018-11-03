@@ -27,6 +27,8 @@ var namesInit = [{
                 }];
 var names = [];
 
+var apiIndex;
+
 // database.ref().set({
 //     apis: topics
 //     }); 
@@ -127,6 +129,7 @@ function displayApiInfo() {
     var apiURL = $(this).attr("api-url");
     var apiParam = $(this).attr("api-param");   
     var apiSample = $(this).attr("api-sample");   
+    apiIndex = $(this).attr("api-index"); 
     // var apiKey = $("#input-key").val().trim();
     names = JSON.parse(localStorage.getItem('names'));
     if (names === null)
@@ -199,6 +202,7 @@ function renderButtons(savedButtons) {
                                            , { a: "api-url", v: savedButtons[i].url}
                                            , { a: "api-param", v: savedButtons[i].param}
                                            , { a: "api-sample", v: savedButtons[i].sample}
+                                           , { a: "api-index", v: i}
                                            ]
                                     }
                                 )
@@ -256,6 +260,79 @@ $("#add-button").on("click", function(event) {
         $("#input-key").val("");
     }
 });
+
+$("#upd-button").on("click", function(event) {
+    event.preventDefault();
+    var apiName = $("#input-name").val().trim();
+    var apiUrl = $("#input-url").val().trim();
+    var apiParam = $("#input-param").val().trim();
+    var apiSample = $("#input-sample").val().trim();
+    var apiKey = $("#input-key").val().trim();
+    var isFound = false;
+    // if (isValid(apiName))
+    // {
+        names = JSON.parse(localStorage.getItem('names'));
+        if (names === null)
+        {
+            names = namesInit;
+            // console.log(names[0].name);
+        }
+
+        topics[apiIndex].url = apiUrl;
+        topics[apiIndex].param = apiParam;
+        topics[apiIndex].sample = apiSample;
+        // topics.push({name: apiName 
+        //            , url: apiUrl
+        //            , param: apiParam
+        //            , sample: apiSample
+        //         }); 
+        // topics[0].name = apiName;
+        database.ref().set({
+                            apis: topics
+                            });           
+        // renderButtons(topics);
+        // names[apiIndex+1].name;
+        for (var i=0;i<names.length;i++)
+        {
+            if (names[i].name === apiName)
+            {
+                names[i].value = apiKey;
+                isFound = true;
+                break;
+            }
+        }        
+        if (!isFound){
+            names.push({name: apiName,
+                        value: apiKey 
+                });
+        }
+
+        localStorage.setItem('names', JSON.stringify(names));       
+ });
+
+ $("#del-button").on("click", function(event) {
+        event.preventDefault();
+        var apiName = $("#input-name").val().trim();
+        names = JSON.parse(localStorage.getItem('names'));
+        if (names === null)
+        {
+            names = namesInit;
+            // console.log(names[0].name);
+        }
+        topics.splice(apiIndex,1);
+        database.ref().set({
+                            apis: topics
+                            });           
+        for (var i=0;i<names.length;i++)
+        {
+            if (names[i].name === apiName)
+            {
+                names.splice(i,1);
+                break;
+            }
+        }        
+        localStorage.setItem('names', JSON.stringify(names));       
+ });
 
  // Firebase watcher + initial loader HINT: .on("value")
  database.ref().on("value", 
