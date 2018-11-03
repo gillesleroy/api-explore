@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Api Entry</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    
+        <!--The css link.-->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+
+<body>
+    <!--The navigation menu.-->
+    
+        <header><ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">API SEARCH</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">API ENTRY</a>
+                </li>
+            </ul></header>
+    
+
+
+    <!--The entry bars.-->
+    <div class="jumbotron">
+        
+            <center><h2>Api Entry</h2></center>
+        
+        
+
+        <form id="api_form">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Author:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: Carl Carlson">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Api Title:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ex: NY Times">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Api URL:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: 32 characters">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Api Documentation URL:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Link to the information">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Api Parameters:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex Date, Time">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Api Key:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: 32 characters">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Sample URL:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: 32 characters">
+            </div>
+            </form>
+
+         <!--The description box.-->
+            <form>
+                <div class="form-group">
+                        <label for="comment">Description:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+            <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </form>
+    </div>
+
+</body>
+
+</html>
