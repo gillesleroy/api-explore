@@ -1,0 +1,27 @@
+button,
+div,
+form,
+input {
+  margin: 10px;
+}
+
+#input-name {
+  width: 100px;
+}
+#input-url {
+  width: 650px;
+}
+#input-param {
+  width: 650px;
+}
+#input-key {
+  width: 400px;
+}
+#input-sample {
+  width: 800px;
+}
+
+#frameSample {
+  height: 600px;
+  width: 800px;
+}
