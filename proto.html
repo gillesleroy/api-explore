@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Exploration</title>
+    <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/proto.css" />
+     <!-- jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script type="text/javascript" src="assets/javascript/lib.js"></script>    
+</head>
+<body>
+    <div class="container">
+        <!-- Buttons will Get Dumped Here -->
+        <div id="buttons-view">
+        </div>
+        <form id="form-api">
+            <label for="input-name">Api name</label>
+            <input id="input-name" type="text" >
+            <br>
+            <label for="input-url">URL</label>
+            <input id="input-url" type="text" >    
+            <br>
+            <label for="input-param">Parameters</label>
+            <input id="input-param" type="text" >      
+            <br>
+            <label for="input-sample">Sample</label>
+            <input id="input-sample" type="text" >   
+            <br>          
+            <label for="input-key">Key</label>
+            <input id="input-key" type="text" >  
+            <br>            
+            <input id="add-button" type="submit" value="Add">
+            <input id="clear-button" type="submit" value="Clear">
+        </form>
+    </div>
+    <div class="container" id="divSample" >
+        <iframe id="frameSample"></iframe>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA206lTheBUyZfomtzhYdMi2RPpq3HJiqA&callback=initMap" type="text/javascript"></script> -->
+    <script type="text/javascript" src="assets/javascript/proto.js"></script>
+</body>
+</html>
