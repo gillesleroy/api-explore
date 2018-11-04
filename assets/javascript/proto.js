@@ -130,6 +130,10 @@ return (isGood);
 function displayApiInfo() {
     // var limit = 10;
     var apiName = $(this).attr("api-name");
+    var apiDescription = $(this).attr("api-description");
+    var apiOwner = $(this).attr("api-owner");
+    var apiAuthors = $(this).attr("api-authors");
+    var apiDocurl = $(this).attr("api-docurl");
     var apiURL = $(this).attr("api-url");
     var apiParam = $(this).attr("api-param");   
     var apiSample = $(this).attr("api-sample");   
@@ -162,6 +166,10 @@ function displayApiInfo() {
     // var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?";
     // queryURL = queryURL + "&q="+searchTerm+"&facet_field=source&begin_date="+startYear+"&end_date="+endYear;
     $("#input-name").val(apiName);
+    $("#input-description").val(apiDescription);
+    $("#input-owner").val(apiOwner);
+    $("#input-authors").val(apiAuthors);
+    $("#input-docurl").val(apiDocurl);
     $("#input-url").val(apiURL);
     $("#input-param").val(apiParam);
     $("#input-sample").val(apiSample);
@@ -193,20 +201,24 @@ function displayApiInfo() {
 //  renderButtons();
 //Refresh the list of buttons from the array
 function renderButtons(savedButtons) {
-    $("#buttons-view").empty();
+    $("#api-list").empty();
     // Looping through the array of topics
     for (var i = 0; i < savedButtons.length; i++){
-        $("#buttons-view").append(
+        $("#api-list").append(
                                 addObj({
                                     type:  "button"
                                     ,class: "classApi"
                                     ,text: savedButtons[i].name
                                     ,attr: [
-                                             { a: "api-name", v: savedButtons[i].name}
-                                           , { a: "api-url", v: savedButtons[i].url}
-                                           , { a: "api-param", v: savedButtons[i].param}
-                                           , { a: "api-sample", v: savedButtons[i].sample}
-                                           , { a: "api-index", v: i}
+                                              { a: "api-name", v: savedButtons[i].name}
+                                            , { a: "api-description", v: savedButtons[i].description}
+                                            , { a: "api-owner", v: savedButtons[i].owner}
+                                            , { a: "api-authors", v: savedButtons[i].authors}
+                                            , { a: "api-docurl", v: savedButtons[i].docurl}                                             
+                                            , { a: "api-url", v: savedButtons[i].url}
+                                            , { a: "api-param", v: savedButtons[i].param}
+                                            , { a: "api-sample", v: savedButtons[i].sample}
+                                            , { a: "api-index", v: i}
                                            ]
                                     }
                                 )
@@ -230,6 +242,10 @@ $("#clear-button").on("click", function(event) {
 $("#add-button").on("click", function(event) {
     event.preventDefault();
     var apiName = $("#input-name").val().trim();
+    var apiDescription = $("#input-description").val().trim();
+    var apiOwner = $("#input-owner").val().trim();
+    var apiAuthors = $("#input-authors").val().trim();
+    var apiDocurl = $("#input-docurl").val().trim();
     var apiUrl = $("#input-url").val().trim();
     var apiParam = $("#input-param").val().trim();
     var apiSample = $("#input-sample").val().trim();
@@ -244,6 +260,10 @@ $("#add-button").on("click", function(event) {
         }
 
         topics.push({name: apiName 
+                   , description: apiDescription
+                   , owner: apiOwner
+                   , authors: apiAuthors
+                   , docurl: apiDocurl
                    , url: apiUrl
                    , param: apiParam
                    , sample: apiSample
@@ -258,6 +278,10 @@ $("#add-button").on("click", function(event) {
               });
         localStorage.setItem('names', JSON.stringify(names));       
         $("#input-name").val("");
+        $("#input-description").val("");
+        $("#input-owner").val("");
+        $("#input-authors").val("");
+        $("#input-docurl").val("");
         $("#input-url").val("");
         $("#input-param").val("");
         $("#input-sample").val("");
@@ -268,6 +292,10 @@ $("#add-button").on("click", function(event) {
 $("#upd-button").on("click", function(event) {
     event.preventDefault();
     var apiName = $("#input-name").val().trim();
+    var apiDescription = $("#input-description").val().trim();
+    var apiOwner = $("#input-owner").val().trim();
+    var apiAuthors = $("#input-authors").val().trim();
+    var apiDocurl = $("#input-docurl").val().trim();   
     var apiUrl = $("#input-url").val().trim();
     var apiParam = $("#input-param").val().trim();
     var apiSample = $("#input-sample").val().trim();
@@ -282,6 +310,10 @@ $("#upd-button").on("click", function(event) {
             // console.log(names[0].name);
         }
 
+        topics[apiIndex].description = apiDescription;
+        topics[apiIndex].owner = apiOwner;
+        topics[apiIndex].authors = apiAuthors;
+        topics[apiIndex].docurl = apiDocurl;
         topics[apiIndex].url = apiUrl;
         topics[apiIndex].param = apiParam;
         topics[apiIndex].sample = apiSample;
