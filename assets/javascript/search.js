@@ -34,6 +34,16 @@ var names = [];
 var apiIndex;
 
 function displayApiInfo() {
+    $("#display-name").text("");
+    $("#display-description").text("");
+    $("#display-owner").text("");
+    $("#display-authors").text("");
+    $("#display-docurl").text("");
+    $("#display-url").text("");
+    $("#display-param").text("");
+    $("#display-sample").text("");
+    $("#display-key").text("");
+    $("#frameSample").attr("src","#");
     // var limit = 10;
     var apiName = $(this).attr("api-name");
     var apiDescription = $(this).attr("api-description");
