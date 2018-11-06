@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Api Entry</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    
+        <!--The css link.-->
+        <link rel="stylesheet" href="assets/css/welcome.css">
+
+</head>
+
+
+
+<body>
+    
+    <!--The navigation menu.-->
+    <header><ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">API SEARCH</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">API ENTRY</a>
+                </li>
+            </ul></header>
+            <br>
+
+            <div class="container">
+                
+                <!--The giphys.-->
+                <img id="img_left" src="assets/images/spongebobleft.gif" alt="Spongebob">
+                <img id="img_right" src="assets/images/spongebobright.gif" alt="Spongebob">
+                
+                <!--The search button.-->
+       <center><button id="api_search">Search Apis</button></center>
+       <br><br>
+
+       <!--The registration forms.-->
+           <center><form id="reg_form">
+                    <h3>Register to contribute!</h3>
+                    <br>
+                    <label>Username: </label>
+                        <input type="text" id="user_name" placeholder="ex: ApiGod">
+                        <br>
+                        <label>First Name:</label>
+                        <input type="text" id="first_name" placeholder="ex: John">
+                        <br>
+                        <label>Last Name:</label>
+                        <input type="text" id="last_name" placeholder="ex: Doe">
+                        <br><br>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <br></center>
+                </div>  
+              
+<!--The about us section.-->
+    <div class="jumbotron">
+    <h2 id="about_us">About Us</h2>
+    <hr class="my-4">
+    <p>Input 1</p>
+    <p>Input 2</p>
+    <p>Input 3</p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script type="text/javascript" src="assets/javascript/search.js"></script>
+</body>
+
+</html>
