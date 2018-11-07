@@ -1,6 +1,6 @@
 var user = [];
 //get user info and store locally
-$("#login-button").on("click", function(event) {
+$("#button-submit").on("click", function(event) {
     event.preventDefault();
     var userName = $("#input-user").val().trim();
     var firstName = $("#input-first").val().trim();
@@ -20,10 +20,15 @@ $("#login-button").on("click", function(event) {
         $("#upd-button").show();  
     }
  });
+/*
+ $(document).on("click", ".classApi", displayInfo);
 
- $(document).on("click", ".classApi");
-
-
+ function displayInfo(){
+    $("#input-user").reset();
+    $("#input-first").reset();
+    $("#input-last").reset();
+ }
+*/
  //clear form
  /*
  $("#clear-button").on("click", function(event){
@@ -31,3 +36,4 @@ $("#login-button").on("click", function(event) {
     $("#login-first").reset();
     $("#login-last").reset();
  })
+ */
