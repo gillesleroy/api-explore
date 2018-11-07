@@ -2,9 +2,9 @@ var user = [];
 //get user info and store locally
 $("#login-button").on("click", function(event) {
     event.preventDefault();
-    var userName = $("#login-user").val().trim();
-    var firstName = $("#login-first").val().trim();
-    var lastName = $("#login-last").val().trim();
+    var userName = $("#input-user").val().trim();
+    var firstName = $("#input-first").val().trim();
+    var lastName = $("#input-last").val().trim();
 
     localStorage.setItem("user", userName);
     localStorage.setItem("first", firstName);
@@ -31,4 +31,3 @@ $("#login-button").on("click", function(event) {
     $("#login-first").reset();
     $("#login-last").reset();
  })
- */
