@@ -95,6 +95,18 @@ function displayApiInfo() {
     // console.log(apiURL);
     // console.log(apiKey);
     // console.log(apiParam);
+
+    $("#nav").append(
+        addObj({
+            type:  "button"
+            ,class: "classToForm"
+            ,text: savedButtons[i].name
+            ,attr: [
+                     { a: "api-name", v: savedButtons[i].name}
+                   ]
+            })
+        );
+
     var queryURL = apiURL+apiKey+apiParam;
     console.log(queryURL);
     // console.log(queryURLnew);
@@ -142,6 +154,30 @@ function renderButtons(savedButtons) {
         )}
   }
 
+  $("#edit-button").on("click", function(event) {
+    event.preventDefault();
+    var apiName = $("#input-name").val().trim();
+    names = JSON.parse(localStorage.getItem('names'));
+    if (names === null)
+    {
+        names = namesInit;
+        // console.log(names[0].name);
+    }
+    topics.splice(apiIndex,1);
+    database.ref().set({
+                        apis: topics
+                        });           
+    for (var i=0;i<names.length;i++)
+    {
+        if (names[i].name === apiName)
+        {
+            names.splice(i,1);
+            break;
+        }
+    }        
+    localStorage.setItem('names', JSON.stringify(names));       
+});
+
  // Firebase watcher + initial loader HINT: .on("value")
  database.ref().on("value", 
     function(snapshot) {
@@ -156,3 +192,10 @@ function renderButtons(savedButtons) {
         });
 
 $(document).on("click", ".classApi", displayApiInfo);
+
+$(document).on("click", ".classToForm", function() {
+    var url = "https://gillesleroy.github.io/api-explore/form.html?p_apiname="+$(this).attr("api-name");
+    window.location(url);
+    }
+);
+
