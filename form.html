@@ -12,6 +12,10 @@
         <!--The css link.-->
         <link rel="stylesheet" href="assets/css/form.css">
 
+        <!--Javascript and Jquery (lib).-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/lib.js"></script>
+
 </head>
 
 
@@ -39,37 +43,36 @@
             <center><h2>Api Entry</h2></center>
         
         
-
-        <form id="api_form">
-            <div class="form-group">
-                <label for="formGroupExampleInput">Author:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: Carl Carlson">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Api Title:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ex: NY Times">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Api URL:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: 32 characters">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Api Documentation URL:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Link to the information">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Api Parameters:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex Date, Time">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Api Key:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: 32 characters">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Sample URL:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex: 32 characters">
-            </div>
-            </form>
+            <form id="api_form">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Authors:</label>
+                    <input type="text" class="form-control" id="input-authors" placeholder="ex: Carl Carlson">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Api Title:</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="ex: NY Times">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Api URL:</label>
+                    <input type="text" class="form-control" id="input-url" placeholder="ex: 32 characters">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Api Documentation URL:</label>
+                    <input type="text" class="form-control" id="input-docurl" placeholder="Link to the information">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Api Parameters:</label>
+                    <input type="text" class="form-control" id="input-param" placeholder="ex Date, Time">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Api Key:</label>
+                    <input type="text" class="form-control" id="input-key" placeholder="ex: 32 characters">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Sample URL:</label>
+                    <input type="text" class="form-control" id="input-sample" placeholder="ex: 32 characters">
+                </div>
+                </form>
 
          <!--The description box.-->
             <form>
@@ -80,6 +83,10 @@
             <center><button type="submit" class="btn btn-primary">Submit</button></center>
         </form>
     </div>
+
+    <!--Firebase and Javascript.-->
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script type="text/javascript" src="assets/javascript/welcome.js"></script>
 
 </body>
 
