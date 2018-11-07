@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
@@ -10,7 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/lib.js"></script>    
 <!-- Override CSS file -->
-<link rel="stylesheet" href = "assets/css/style.css">
+<link rel="stylesheet" href = "assets/css/search.css">
 </head>
 <body>
 <div>
@@ -29,14 +31,20 @@
             </div>
     </nav>
     <!-- End Header -->
+
+
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>API Explorer</h2>
-                    <p>To start click a button on the left panel to start</p>
+            <div>
+                <div class="banner" class="col-md-10">
+                    <img src="assets/images/search.png" height="125" width="125">   
+                    <div class="col-md-8">
+                        <div>
+                            <h2>API Explorer</h2>    
+                            <span>To start click a button to get a view of an API.</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
             <div class="row">
                 <div class="col-md-3">
                     <div class="card">
@@ -52,6 +60,9 @@
                             <div class="card-body">
                                 <h3 id="display-name">API Name</h3>
                                 <table style="width: 100%">
+                                    <tr>
+                                        <td id="nav"></td>
+                                    </tr>
                                     <tr>
                                         <th>API Description:</th>
                                         <td id="display-description"></td>
