@@ -10,7 +10,7 @@ $("#button-submit").on("click", function(event) {
     localStorage.setItem("first", firstName);
     localStorage.setItem("last", lastName);       
  });
- 
+
 //click on api buttons to show or hide update button if its the owner or not
  $(".classApi").on("click", function(event){
     var checker = $(this).attr("owner");
@@ -21,7 +21,7 @@ $("#button-submit").on("click", function(event) {
         $("#upd-button").show();  
     }
  });
-
+//when page loads, check localSorage for user if it has any input or not
  window.onload = function(){
     if(localStorage.user !== null) {
         // this will only work if the token is set in the localStorage
