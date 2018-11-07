@@ -6,7 +6,6 @@ $("#login-button").on("click", function(event) {
     var firstName = $("#login-first").val().trim();
     var lastName = $("#login-last").val().trim();
 
-
     localStorage.setItem("user", userName);
     localStorage.setItem("first", firstName);
     localStorage.setItem("last", lastName);       
@@ -26,3 +25,10 @@ $("#login-button").on("click", function(event) {
 
 
  //clear form
+ /*
+ $("#clear-button").on("click", function(event){
+    $("#login-user").reset();
+    $("#login-first").reset();
+    $("#login-last").reset();
+ })
+ */
